@@ -1,0 +1,462 @@
+
+<!doctype html>
+<html lang='en'>
+  <head>
+    <title>TestCommitOneCommand -- PASS</title>
+  </head>
+  <style>
+  table {
+    font-family: "Courier New";
+    border-collapse: collapse;
+  }
+
+  table, th, td {
+    padding: 8px;
+    border: 1px solid #cccccc;
+  }
+
+  td.testcell {
+    background-color: #ffffff;
+  }
+
+  td.Follower {
+    background-color: #ffffff;
+  }
+
+  td.Candidate {
+    background-color: #e2e2a3;
+  }
+
+  td.Leader {
+    background-color: #e6fff5;
+  }
+
+  td.Dead {
+    background-color: #dddddd;
+  }
+
+  h1 {
+    text-align: center;
+  }
+  </style>
+<body>
+  <h1>TestCommitOneCommand -- PASS</h1>
+  <p></p>
+  <table>
+    <tr>
+      
+      <th>Time</th>
+      
+      <th>TEST</th>
+      
+      <th>0</th>
+      
+      <th>1</th>
+      
+      <th>2</th>
+      
+    </tr>
+    
+    <tr>
+      <td>09:17:41.477490</td>  <td class="testcell"></td>  <td class="Follower">listening at [::]:38075</td>  <td class="Follower"></td>  <td class="Follower"></td>
+    </tr>
+    
+    <tr>
+      <td>09:17:41.477827</td>  <td class="testcell"></td>  <td class="Follower"></td>  <td class="Follower">listening at [::]:36197</td>  <td class="Follower"></td>
+    </tr>
+    
+    <tr>
+      <td>09:17:41.478132</td>  <td class="testcell"></td>  <td class="Follower"></td>  <td class="Follower"></td>  <td class="Follower">listening at [::]:33081</td>
+    </tr>
+    
+    <tr>
+      <td>09:17:41.481161</td>  <td class="testcell"></td>  <td class="Follower"></td>  <td class="Follower"></td>  <td class="Follower">election timer started (164ms), term=0</td>
+    </tr>
+    
+    <tr>
+      <td>09:17:41.481192</td>  <td class="testcell"></td>  <td class="Follower">election timer started (264ms), term=0</td>  <td class="Follower"></td>  <td class="Follower"></td>
+    </tr>
+    
+    <tr>
+      <td>09:17:41.481167</td>  <td class="testcell"></td>  <td class="Follower"></td>  <td class="Follower">election timer started (263ms), term=0</td>  <td class="Follower"></td>
+    </tr>
+    
+    <tr>
+      <td>09:17:41.652055</td>  <td class="testcell"></td>  <td class="Follower"></td>  <td class="Follower"></td>  <td class="Candidate">becomes Candidate (currentTerm=1); log=[]</td>
+    </tr>
+    
+    <tr>
+      <td>09:17:41.652160</td>  <td class="testcell"></td>  <td class="Follower"></td>  <td class="Follower"></td>  <td class="Candidate">election timer started (169ms), term=1</td>
+    </tr>
+    
+    <tr>
+      <td>09:17:41.652174</td>  <td class="testcell"></td>  <td class="Follower"></td>  <td class="Follower"></td>  <td class="Candidate">sending RequestVote to 1: {Term:1 CandidateId:2 LastLogIndex:-1 LastLogTerm:-1}</td>
+    </tr>
+    
+    <tr>
+      <td>09:17:41.652231</td>  <td class="testcell"></td>  <td class="Follower"></td>  <td class="Follower"></td>  <td class="Candidate">sending RequestVote to 0: {Term:1 CandidateId:2 LastLogIndex:-1 LastLogTerm:-1}</td>
+    </tr>
+    
+    <tr>
+      <td>09:17:41.656132</td>  <td class="testcell"></td>  <td class="Follower"></td>  <td class="Follower">RequestVote: {Term:1 CandidateId:2 LastLogIndex:-1 LastLogTerm:-1} [currentTerm=0, votedFor=-1, log index/term=(-1, -1)]</td>  <td class="Candidate"></td>
+    </tr>
+    
+    <tr>
+      <td>09:17:41.656161</td>  <td class="testcell"></td>  <td class="Follower"></td>  <td class="Follower">... term out of date in RequestVote</td>  <td class="Candidate"></td>
+    </tr>
+    
+    <tr>
+      <td>09:17:41.656181</td>  <td class="testcell"></td>  <td class="Follower"></td>  <td class="Follower">becomes Follower with term=1; log=[]</td>  <td class="Candidate"></td>
+    </tr>
+    
+    <tr>
+      <td>09:17:41.656277</td>  <td class="testcell"></td>  <td class="Follower"></td>  <td class="Follower">... RequestVote reply: &{Term:1 VoteGranted:true}</td>  <td class="Candidate"></td>
+    </tr>
+    
+    <tr>
+      <td>09:17:41.656342</td>  <td class="testcell"></td>  <td class="Follower"></td>  <td class="Follower">election timer started (220ms), term=1</td>  <td class="Candidate"></td>
+    </tr>
+    
+    <tr>
+      <td>09:17:41.657136</td>  <td class="testcell"></td>  <td class="Follower"></td>  <td class="Follower"></td>  <td class="Candidate">received RequestVoteReply {Term:1 VoteGranted:true}</td>
+    </tr>
+    
+    <tr>
+      <td>09:17:41.657178</td>  <td class="testcell"></td>  <td class="Follower"></td>  <td class="Follower"></td>  <td class="Candidate">wins election with 2 votes</td>
+    </tr>
+    
+    <tr>
+      <td>09:17:41.657274</td>  <td class="testcell"></td>  <td class="Follower"></td>  <td class="Follower"></td>  <td class="Leader">becomes Leader; term=1, nextIndex=map[0:0 1:0], matchIndex=map[0:-1 1:-1]; log=[]</td>
+    </tr>
+    
+    <tr>
+      <td>09:17:41.657423</td>  <td class="testcell"></td>  <td class="Follower"></td>  <td class="Follower"></td>  <td class="Leader">sending AppendEntries to 0: ni=0, args={Term:1 LeaderId:2 PrevLogIndex:-1 PrevLogTerm:-1 Entries:[] LeaderCommit:-1}</td>
+    </tr>
+    
+    <tr>
+      <td>09:17:41.657478</td>  <td class="testcell"></td>  <td class="Follower"></td>  <td class="Follower"></td>  <td class="Leader">sending AppendEntries to 1: ni=0, args={Term:1 LeaderId:2 PrevLogIndex:-1 PrevLogTerm:-1 Entries:[] LeaderCommit:-1}</td>
+    </tr>
+    
+    <tr>
+      <td>09:17:41.658127</td>  <td class="testcell"></td>  <td class="Follower">RequestVote: {Term:1 CandidateId:2 LastLogIndex:-1 LastLogTerm:-1} [currentTerm=0, votedFor=-1, log index/term=(-1, -1)]</td>  <td class="Follower"></td>  <td class="Leader"></td>
+    </tr>
+    
+    <tr>
+      <td>09:17:41.658164</td>  <td class="testcell"></td>  <td class="Follower">... term out of date in RequestVote</td>  <td class="Follower"></td>  <td class="Leader"></td>
+    </tr>
+    
+    <tr>
+      <td>09:17:41.658208</td>  <td class="testcell"></td>  <td class="Follower">becomes Follower with term=1; log=[]</td>  <td class="Follower"></td>  <td class="Leader"></td>
+    </tr>
+    
+    <tr>
+      <td>09:17:41.658327</td>  <td class="testcell"></td>  <td class="Follower">... RequestVote reply: &{Term:1 VoteGranted:true}</td>  <td class="Follower"></td>  <td class="Leader"></td>
+    </tr>
+    
+    <tr>
+      <td>09:17:41.658468</td>  <td class="testcell"></td>  <td class="Follower">election timer started (151ms), term=1</td>  <td class="Follower"></td>  <td class="Leader"></td>
+    </tr>
+    
+    <tr>
+      <td>09:17:41.659263</td>  <td class="testcell"></td>  <td class="Follower"></td>  <td class="Follower"></td>  <td class="Leader">received RequestVoteReply {Term:1 VoteGranted:true}</td>
+    </tr>
+    
+    <tr>
+      <td>09:17:41.659310</td>  <td class="testcell"></td>  <td class="Follower"></td>  <td class="Follower"></td>  <td class="Leader">while waiting for reply, state = Leader</td>
+    </tr>
+    
+    <tr>
+      <td>09:17:41.660920</td>  <td class="testcell"></td>  <td class="Follower">AppendEntries: {Term:1 LeaderId:2 PrevLogIndex:-1 PrevLogTerm:-1 Entries:[] LeaderCommit:-1}</td>  <td class="Follower"></td>  <td class="Leader"></td>
+    </tr>
+    
+    <tr>
+      <td>09:17:41.660968</td>  <td class="testcell"></td>  <td class="Follower">AppendEntries reply: {Term:1 Success:true}</td>  <td class="Follower"></td>  <td class="Leader"></td>
+    </tr>
+    
+    <tr>
+      <td>09:17:41.661392</td>  <td class="testcell"></td>  <td class="Follower">in election timer term changed from 0 to 1, bailing out</td>  <td class="Follower"></td>  <td class="Leader"></td>
+    </tr>
+    
+    <tr>
+      <td>09:17:41.661416</td>  <td class="testcell"></td>  <td class="Follower"></td>  <td class="Follower"></td>  <td class="Leader">AppendEntries reply from 0 success: nextIndex := map[0:0 1:0], matchIndex := map[0:-1 1:-1]</td>
+    </tr>
+    
+    <tr>
+      <td>09:17:41.661406</td>  <td class="testcell"></td>  <td class="Follower"></td>  <td class="Follower">in election timer term changed from 0 to 1, bailing out</td>  <td class="Leader"></td>
+    </tr>
+    
+    <tr>
+      <td>09:17:41.662305</td>  <td class="testcell"></td>  <td class="Follower"></td>  <td class="Follower"></td>  <td class="Leader">in election timer state=Leader, bailing out</td>
+    </tr>
+    
+    <tr>
+      <td>09:17:41.663446</td>  <td class="testcell"></td>  <td class="Follower"></td>  <td class="Follower">AppendEntries: {Term:1 LeaderId:2 PrevLogIndex:-1 PrevLogTerm:-1 Entries:[] LeaderCommit:-1}</td>  <td class="Leader"></td>
+    </tr>
+    
+    <tr>
+      <td>09:17:41.663493</td>  <td class="testcell"></td>  <td class="Follower"></td>  <td class="Follower">AppendEntries reply: {Term:1 Success:true}</td>  <td class="Leader"></td>
+    </tr>
+    
+    <tr>
+      <td>09:17:41.663997</td>  <td class="testcell"></td>  <td class="Follower"></td>  <td class="Follower"></td>  <td class="Leader">AppendEntries reply from 1 success: nextIndex := map[0:0 1:0], matchIndex := map[0:-1 1:-1]</td>
+    </tr>
+    
+    <tr>
+      <td>09:17:41.708185</td>  <td class="testcell"></td>  <td class="Follower"></td>  <td class="Follower"></td>  <td class="Leader">sending AppendEntries to 0: ni=0, args={Term:1 LeaderId:2 PrevLogIndex:-1 PrevLogTerm:-1 Entries:[] LeaderCommit:-1}</td>
+    </tr>
+    
+    <tr>
+      <td>09:17:41.708218</td>  <td class="testcell"></td>  <td class="Follower"></td>  <td class="Follower"></td>  <td class="Leader">sending AppendEntries to 1: ni=0, args={Term:1 LeaderId:2 PrevLogIndex:-1 PrevLogTerm:-1 Entries:[] LeaderCommit:-1}</td>
+    </tr>
+    
+    <tr>
+      <td>09:17:41.710641</td>  <td class="testcell"></td>  <td class="Follower">AppendEntries: {Term:1 LeaderId:2 PrevLogIndex:-1 PrevLogTerm:-1 Entries:[] LeaderCommit:-1}</td>  <td class="Follower"></td>  <td class="Leader"></td>
+    </tr>
+    
+    <tr>
+      <td>09:17:41.710703</td>  <td class="testcell"></td>  <td class="Follower">AppendEntries reply: {Term:1 Success:true}</td>  <td class="Follower"></td>  <td class="Leader"></td>
+    </tr>
+    
+    <tr>
+      <td>09:17:41.711072</td>  <td class="testcell"></td>  <td class="Follower"></td>  <td class="Follower"></td>  <td class="Leader">AppendEntries reply from 0 success: nextIndex := map[0:0 1:0], matchIndex := map[0:-1 1:-1]</td>
+    </tr>
+    
+    <tr>
+      <td>09:17:41.712166</td>  <td class="testcell"></td>  <td class="Follower"></td>  <td class="Follower">AppendEntries: {Term:1 LeaderId:2 PrevLogIndex:-1 PrevLogTerm:-1 Entries:[] LeaderCommit:-1}</td>  <td class="Leader"></td>
+    </tr>
+    
+    <tr>
+      <td>09:17:41.712295</td>  <td class="testcell"></td>  <td class="Follower"></td>  <td class="Follower">AppendEntries reply: {Term:1 Success:true}</td>  <td class="Leader"></td>
+    </tr>
+    
+    <tr>
+      <td>09:17:41.713324</td>  <td class="testcell"></td>  <td class="Follower"></td>  <td class="Follower"></td>  <td class="Leader">AppendEntries reply from 1 success: nextIndex := map[0:0 1:0], matchIndex := map[0:-1 1:-1]</td>
+    </tr>
+    
+    <tr>
+      <td>09:17:41.757536</td>  <td class="testcell"></td>  <td class="Follower"></td>  <td class="Follower"></td>  <td class="Leader">sending AppendEntries to 1: ni=0, args={Term:1 LeaderId:2 PrevLogIndex:-1 PrevLogTerm:-1 Entries:[] LeaderCommit:-1}</td>
+    </tr>
+    
+    <tr>
+      <td>09:17:41.757729</td>  <td class="testcell"></td>  <td class="Follower"></td>  <td class="Follower"></td>  <td class="Leader">sending AppendEntries to 0: ni=0, args={Term:1 LeaderId:2 PrevLogIndex:-1 PrevLogTerm:-1 Entries:[] LeaderCommit:-1}</td>
+    </tr>
+    
+    <tr>
+      <td>09:17:41.761394</td>  <td class="testcell"></td>  <td class="Follower">AppendEntries: {Term:1 LeaderId:2 PrevLogIndex:-1 PrevLogTerm:-1 Entries:[] LeaderCommit:-1}</td>  <td class="Follower"></td>  <td class="Leader"></td>
+    </tr>
+    
+    <tr>
+      <td>09:17:41.761460</td>  <td class="testcell"></td>  <td class="Follower">AppendEntries reply: {Term:1 Success:true}</td>  <td class="Follower"></td>  <td class="Leader"></td>
+    </tr>
+    
+    <tr>
+      <td>09:17:41.761952</td>  <td class="testcell"></td>  <td class="Follower"></td>  <td class="Follower"></td>  <td class="Leader">AppendEntries reply from 0 success: nextIndex := map[0:0 1:0], matchIndex := map[0:-1 1:-1]</td>
+    </tr>
+    
+    <tr>
+      <td>09:17:41.762103</td>  <td class="testcell"></td>  <td class="Follower"></td>  <td class="Follower">AppendEntries: {Term:1 LeaderId:2 PrevLogIndex:-1 PrevLogTerm:-1 Entries:[] LeaderCommit:-1}</td>  <td class="Leader"></td>
+    </tr>
+    
+    <tr>
+      <td>09:17:41.762178</td>  <td class="testcell"></td>  <td class="Follower"></td>  <td class="Follower">AppendEntries reply: {Term:1 Success:true}</td>  <td class="Leader"></td>
+    </tr>
+    
+    <tr>
+      <td>09:17:41.763066</td>  <td class="testcell"></td>  <td class="Follower"></td>  <td class="Follower"></td>  <td class="Leader">AppendEntries reply from 1 success: nextIndex := map[0:0 1:0], matchIndex := map[0:-1 1:-1]</td>
+    </tr>
+    
+    <tr>
+      <td>09:17:41.781909</td>  <td class="testcell">submitting 42 to 2</td>  <td class="Follower"></td>  <td class="Follower"></td>  <td class="Leader"></td>
+    </tr>
+    
+    <tr>
+      <td>09:17:41.782057</td>  <td class="testcell"></td>  <td class="Follower"></td>  <td class="Follower"></td>  <td class="Leader">Submit received by Leader: 42</td>
+    </tr>
+    
+    <tr>
+      <td>09:17:41.782186</td>  <td class="testcell"></td>  <td class="Follower"></td>  <td class="Follower"></td>  <td class="Leader">... log=[{42 1}]</td>
+    </tr>
+    
+    <tr>
+      <td>09:17:41.807970</td>  <td class="testcell"></td>  <td class="Follower"></td>  <td class="Follower"></td>  <td class="Leader">sending AppendEntries to 0: ni=0, args={Term:1 LeaderId:2 PrevLogIndex:-1 PrevLogTerm:-1 Entries:[{Command:42 Term:1}] LeaderCommit:-1}</td>
+    </tr>
+    
+    <tr>
+      <td>09:17:41.808474</td>  <td class="testcell"></td>  <td class="Follower"></td>  <td class="Follower"></td>  <td class="Leader">sending AppendEntries to 1: ni=0, args={Term:1 LeaderId:2 PrevLogIndex:-1 PrevLogTerm:-1 Entries:[{Command:42 Term:1}] LeaderCommit:-1}</td>
+    </tr>
+    
+    <tr>
+      <td>09:17:41.810507</td>  <td class="testcell"></td>  <td class="Follower">AppendEntries: {Term:1 LeaderId:2 PrevLogIndex:-1 PrevLogTerm:-1 Entries:[{Command:42 Term:1}] LeaderCommit:-1}</td>  <td class="Follower"></td>  <td class="Leader"></td>
+    </tr>
+    
+    <tr>
+      <td>09:17:41.810586</td>  <td class="testcell"></td>  <td class="Follower">... inserting entries [{42 1}] from index 0</td>  <td class="Follower"></td>  <td class="Leader"></td>
+    </tr>
+    
+    <tr>
+      <td>09:17:41.810634</td>  <td class="testcell"></td>  <td class="Follower">... log is now: [{42 1}]</td>  <td class="Follower"></td>  <td class="Leader"></td>
+    </tr>
+    
+    <tr>
+      <td>09:17:41.810677</td>  <td class="testcell"></td>  <td class="Follower">AppendEntries reply: {Term:1 Success:true}</td>  <td class="Follower"></td>  <td class="Leader"></td>
+    </tr>
+    
+    <tr>
+      <td>09:17:41.811004</td>  <td class="testcell"></td>  <td class="Follower"></td>  <td class="Follower">AppendEntries: {Term:1 LeaderId:2 PrevLogIndex:-1 PrevLogTerm:-1 Entries:[{Command:42 Term:1}] LeaderCommit:-1}</td>  <td class="Leader"></td>
+    </tr>
+    
+    <tr>
+      <td>09:17:41.811091</td>  <td class="testcell"></td>  <td class="Follower"></td>  <td class="Follower">... inserting entries [{42 1}] from index 0</td>  <td class="Leader"></td>
+    </tr>
+    
+    <tr>
+      <td>09:17:41.811134</td>  <td class="testcell"></td>  <td class="Follower"></td>  <td class="Follower">... log is now: [{42 1}]</td>  <td class="Leader"></td>
+    </tr>
+    
+    <tr>
+      <td>09:17:41.811172</td>  <td class="testcell"></td>  <td class="Follower"></td>  <td class="Follower">AppendEntries reply: {Term:1 Success:true}</td>  <td class="Leader"></td>
+    </tr>
+    
+    <tr>
+      <td>09:17:41.811547</td>  <td class="testcell"></td>  <td class="Follower"></td>  <td class="Follower"></td>  <td class="Leader">AppendEntries reply from 0 success: nextIndex := map[0:1 1:0], matchIndex := map[0:0 1:-1]</td>
+    </tr>
+    
+    <tr>
+      <td>09:17:41.811591</td>  <td class="testcell"></td>  <td class="Follower"></td>  <td class="Follower"></td>  <td class="Leader">leader sets commitIndex := 0</td>
+    </tr>
+    
+    <tr>
+      <td>09:17:41.811705</td>  <td class="testcell"></td>  <td class="Follower"></td>  <td class="Follower"></td>  <td class="Leader">commitChanSender entries=[{42 1}], savedLastApplied=-1</td>
+    </tr>
+    
+    <tr>
+      <td>09:17:41.811794</td>  <td class="testcell">collectCommits(2) got {Command:42 Index:0 Term:1}</td>  <td class="Follower"></td>  <td class="Follower"></td>  <td class="Leader"></td>
+    </tr>
+    
+    <tr>
+      <td>09:17:41.812194</td>  <td class="testcell"></td>  <td class="Follower"></td>  <td class="Follower"></td>  <td class="Leader">AppendEntries reply from 1 success: nextIndex := map[0:1 1:1], matchIndex := map[0:0 1:0]</td>
+    </tr>
+    
+    <tr>
+      <td>09:17:41.858433</td>  <td class="testcell"></td>  <td class="Follower"></td>  <td class="Follower"></td>  <td class="Leader">sending AppendEntries to 1: ni=1, args={Term:1 LeaderId:2 PrevLogIndex:0 PrevLogTerm:1 Entries:[] LeaderCommit:0}</td>
+    </tr>
+    
+    <tr>
+      <td>09:17:41.858441</td>  <td class="testcell"></td>  <td class="Follower"></td>  <td class="Follower"></td>  <td class="Leader">sending AppendEntries to 0: ni=1, args={Term:1 LeaderId:2 PrevLogIndex:0 PrevLogTerm:1 Entries:[] LeaderCommit:0}</td>
+    </tr>
+    
+    <tr>
+      <td>09:17:41.861150</td>  <td class="testcell"></td>  <td class="Follower">AppendEntries: {Term:1 LeaderId:2 PrevLogIndex:0 PrevLogTerm:1 Entries:[] LeaderCommit:0}</td>  <td class="Follower"></td>  <td class="Leader"></td>
+    </tr>
+    
+    <tr>
+      <td>09:17:41.861190</td>  <td class="testcell"></td>  <td class="Follower">... setting commitIndex=0</td>  <td class="Follower"></td>  <td class="Leader"></td>
+    </tr>
+    
+    <tr>
+      <td>09:17:41.861243</td>  <td class="testcell"></td>  <td class="Follower">AppendEntries reply: {Term:1 Success:true}</td>  <td class="Follower"></td>  <td class="Leader"></td>
+    </tr>
+    
+    <tr>
+      <td>09:17:41.861373</td>  <td class="testcell"></td>  <td class="Follower">commitChanSender entries=[{42 1}], savedLastApplied=-1</td>  <td class="Follower"></td>  <td class="Leader"></td>
+    </tr>
+    
+    <tr>
+      <td>09:17:41.861487</td>  <td class="testcell">collectCommits(0) got {Command:42 Index:0 Term:1}</td>  <td class="Follower"></td>  <td class="Follower"></td>  <td class="Leader"></td>
+    </tr>
+    
+    <tr>
+      <td>09:17:41.861636</td>  <td class="testcell"></td>  <td class="Follower"></td>  <td class="Follower"></td>  <td class="Leader">AppendEntries reply from 0 success: nextIndex := map[0:1 1:1], matchIndex := map[0:0 1:0]</td>
+    </tr>
+    
+    <tr>
+      <td>09:17:41.864832</td>  <td class="testcell"></td>  <td class="Follower"></td>  <td class="Follower">AppendEntries: {Term:1 LeaderId:2 PrevLogIndex:0 PrevLogTerm:1 Entries:[] LeaderCommit:0}</td>  <td class="Leader"></td>
+    </tr>
+    
+    <tr>
+      <td>09:17:41.864893</td>  <td class="testcell"></td>  <td class="Follower"></td>  <td class="Follower">... setting commitIndex=0</td>  <td class="Leader"></td>
+    </tr>
+    
+    <tr>
+      <td>09:17:41.864961</td>  <td class="testcell"></td>  <td class="Follower"></td>  <td class="Follower">AppendEntries reply: {Term:1 Success:true}</td>  <td class="Leader"></td>
+    </tr>
+    
+    <tr>
+      <td>09:17:41.865137</td>  <td class="testcell"></td>  <td class="Follower"></td>  <td class="Follower">commitChanSender entries=[{42 1}], savedLastApplied=-1</td>  <td class="Leader"></td>
+    </tr>
+    
+    <tr>
+      <td>09:17:41.865263</td>  <td class="testcell">collectCommits(1) got {Command:42 Index:0 Term:1}</td>  <td class="Follower"></td>  <td class="Follower"></td>  <td class="Leader"></td>
+    </tr>
+    
+    <tr>
+      <td>09:17:41.865376</td>  <td class="testcell"></td>  <td class="Follower"></td>  <td class="Follower"></td>  <td class="Leader">AppendEntries reply from 1 success: nextIndex := map[0:1 1:1], matchIndex := map[0:0 1:0]</td>
+    </tr>
+    
+    <tr>
+      <td>09:17:41.908491</td>  <td class="testcell"></td>  <td class="Follower"></td>  <td class="Follower"></td>  <td class="Leader">sending AppendEntries to 1: ni=1, args={Term:1 LeaderId:2 PrevLogIndex:0 PrevLogTerm:1 Entries:[] LeaderCommit:0}</td>
+    </tr>
+    
+    <tr>
+      <td>09:17:41.908510</td>  <td class="testcell"></td>  <td class="Follower"></td>  <td class="Follower"></td>  <td class="Leader">sending AppendEntries to 0: ni=1, args={Term:1 LeaderId:2 PrevLogIndex:0 PrevLogTerm:1 Entries:[] LeaderCommit:0}</td>
+    </tr>
+    
+    <tr>
+      <td>09:17:41.909992</td>  <td class="testcell"></td>  <td class="Follower"></td>  <td class="Follower">AppendEntries: {Term:1 LeaderId:2 PrevLogIndex:0 PrevLogTerm:1 Entries:[] LeaderCommit:0}</td>  <td class="Leader"></td>
+    </tr>
+    
+    <tr>
+      <td>09:17:41.910039</td>  <td class="testcell"></td>  <td class="Follower"></td>  <td class="Follower">AppendEntries reply: {Term:1 Success:true}</td>  <td class="Leader"></td>
+    </tr>
+    
+    <tr>
+      <td>09:17:41.910338</td>  <td class="testcell"></td>  <td class="Follower"></td>  <td class="Follower"></td>  <td class="Leader">AppendEntries reply from 1 success: nextIndex := map[0:1 1:1], matchIndex := map[0:0 1:0]</td>
+    </tr>
+    
+    <tr>
+      <td>09:17:41.911294</td>  <td class="testcell"></td>  <td class="Follower">AppendEntries: {Term:1 LeaderId:2 PrevLogIndex:0 PrevLogTerm:1 Entries:[] LeaderCommit:0}</td>  <td class="Follower"></td>  <td class="Leader"></td>
+    </tr>
+    
+    <tr>
+      <td>09:17:41.911335</td>  <td class="testcell"></td>  <td class="Follower">AppendEntries reply: {Term:1 Success:true}</td>  <td class="Follower"></td>  <td class="Leader"></td>
+    </tr>
+    
+    <tr>
+      <td>09:17:41.911653</td>  <td class="testcell"></td>  <td class="Follower"></td>  <td class="Follower"></td>  <td class="Leader">AppendEntries reply from 0 success: nextIndex := map[0:1 1:1], matchIndex := map[0:0 1:0]</td>
+    </tr>
+    
+    <tr>
+      <td>09:17:41.933833</td>  <td class="testcell"></td>  <td class="Dead">becomes Dead</td>  <td class="Follower"></td>  <td class="Leader"></td>
+    </tr>
+    
+    <tr>
+      <td>09:17:41.933965</td>  <td class="testcell"></td>  <td class="Dead">commitChanSender done</td>  <td class="Follower"></td>  <td class="Leader"></td>
+    </tr>
+    
+    <tr>
+      <td>09:17:41.934069</td>  <td class="testcell"></td>  <td class="Dead"></td>  <td class="Dead">becomes Dead</td>  <td class="Leader"></td>
+    </tr>
+    
+    <tr>
+      <td>09:17:41.934185</td>  <td class="testcell"></td>  <td class="Dead"></td>  <td class="Dead">commitChanSender done</td>  <td class="Leader"></td>
+    </tr>
+    
+    <tr>
+      <td>09:17:41.934224</td>  <td class="testcell"></td>  <td class="Dead"></td>  <td class="Dead"></td>  <td class="Dead">becomes Dead</td>
+    </tr>
+    
+    <tr>
+      <td>09:17:41.934325</td>  <td class="testcell"></td>  <td class="Dead"></td>  <td class="Dead"></td>  <td class="Dead">commitChanSender done</td>
+    </tr>
+    
+    <tr>
+      <td>09:17:41.937624</td>  <td class="testcell"></td>  <td class="Dead"></td>  <td class="Dead">in election timer state=Dead, bailing out</td>  <td class="Dead"></td>
+    </tr>
+    
+    <tr>
+      <td>09:17:41.938567</td>  <td class="testcell"></td>  <td class="Dead">in election timer state=Dead, bailing out</td>  <td class="Dead"></td>  <td class="Dead"></td>
+    </tr>
+    
+  </table>
+</body>
+</html>

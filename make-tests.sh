@@ -15,4 +15,4 @@ go clean -testcache
 
 go test -v -race -run . ./testing |& tee ${logfile}
 
-# go run ../tools/raft-testlog-viz/main.go < ${logfile}
+# go run ./results/main.go < ${logfile}

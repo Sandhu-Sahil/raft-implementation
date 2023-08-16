@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Raft Implementation</title>
+    <style>
+        body {
+            font-family: sans-serif;
+        }
+        h1 {
+            text-align: center;
+        }
+        h2 {
+            text-align: center;
+        }
+        p {
+            text-align: center;
+        }
+        ul {
+            text-align: center;
+            list-style-position: inside;
+            padding-left: 0;
+        }
+        li {
+            text-align: center;
+        }
+
+    </style>
+</head>
+<body>
+    <h1>Raft Implementation</h1>
+    <p>
+        <a href="https://raft.github.io/raft.pdf">Raft</a> is a consensus algorithm for managing a replicated log. It was designed to be easy to understand. This is an implementation of Raft in GoLang.
+    </p>
+    <p>
+        <a href="https://github.com/Sandhu-Sahil/raft-implementation">Source Code</a>
+    </p>
+    <h2>
+        Test Cases and Results
+    </h2>
+    <ul>
+        <li>
+            <a href="./results/TestElectionBasic.html">Test Election Basic</a>
+        </li>
+        <li>
+            <a href="./results/TestElectionLeaderDisconnect.html">Test Election Leader Disconnect</a>
+        </li>
+        <li>
+            <a href="./results/TestElectionLeaderAndAnotherDisconnect.html">Test Election Leader and Another Disconnect</a>
+        </li>
+        <li>
+            <a href="./results/TestDisconnectAllThenRestore.html">Test Disconnect All Then Restore</a>
+        </li>
+        <li>
+            <a href="./results/TestElectionLeaderDisconnectThenReconnect.html">Test Election Leader Disconnect Then Reconnect</a>
+        </li>
+        <li>
+            <a href="./results/TestElectionLeaderDisconnectThenReconnect5.html">Test Election Leader Disconnect Then Reconnect 5</a>
+        </li>
+        <li>
+            <a href="./results/TestElectionFollowerComesBack.html">Test Election Follower Comes Back</a>
+        </li>
+        <li>
+            <a href="./results/TestElectionDisconnectLoop.html">Test Election Disconnect Loop</a>
+        </li>
+        <li>
+            <a href="./results/TestCommitOneCommand.html">Test Commit One Command</a>
+        </li>
+        <li>
+            <a href="./results/TestSubmitNonLeaderFails.html">Test Submit Non Leader Fails</a>
+        </li>
+        <li>
+            <a href="./results/TestCommitMultipleCommands.html">Test Commit Multiple Commands</a>
+        </li>
+        <li>
+            <a href="./results/TestCommitWithDisconnectionAndRecover.html">Test Commit With Disconnection And Recover</a>
+        </li>
+        <li>
+            <a href="./results/TestNoCommitWithNoQuorum.html">Test No Commit With No Quorum</a>
+        </li>
+        <li>
+            <a href="./results/TestCommitsWithLeaderDisconnects.html">Test Commits With Leader Disconnects</a>
+        </li>
+    </ul>
+</html>
